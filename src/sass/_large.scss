@@ -1,0 +1,164 @@
+@media (min-width:992px) {
+    .nav {
+        .nav-logo-link {
+            padding: 0em 50px;
+        }
+    }
+
+
+    .header-image {
+        height: 50vh;
+
+        .header-text {
+            align-items: flex-start;
+            padding: 50px;
+
+            h1 {
+                margin-top: 0;
+                font-size: 4rem;
+            }
+
+            P {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    .section-links {
+        .wrapper {
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 5em 0;
+        }
+
+        .name-logo {
+            font-size: 5rem;
+        }
+
+        .title-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 30%;
+        }
+
+        .about-us,
+        .as-firm,
+        .documents {
+            align-items: flex-start;
+        }
+
+        p {
+            font-weight: bold;
+            padding: 1em 0;
+        }
+
+        .link {
+            padding: 0.5em 0;
+        }
+    }
+
+    .contact {
+        textarea {
+            max-width: 100%;
+        }
+    }
+
+}
+
+
+@media (min-width:1200px) {
+    .about-us {
+
+        .about-us-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 6em;
+        }
+
+        .about-us-image {
+            object-fit: cover;
+            width: 500px;
+        }
+
+        .about-us-item-two {
+            padding-left: 5em;
+        }
+
+        .about-us-title {
+            font-size: 2.6rem;
+            text-align: left;
+            padding: 0em;
+        }
+
+        .about-us-text {
+            padding-top: 1em;
+            text-align: left;
+        }
+    }
+
+    .pictures {
+
+        .pictures-text {
+            width: 60%;
+            font-size: 5rem;
+            max-width: 1000px;
+        }
+    }
+
+
+    .offert {
+        .section-title {
+            padding-bottom: 1em;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 3em;
+            text-align: center;
+
+            .card-body {
+                width: 30%;
+                margin: 2em 1em;
+
+                .offert-prices {
+                    padding-bottom: 1em
+                }
+            }
+
+        }
+    }
+
+    .contact-images {
+
+        .contact-text {
+            font-size: 1.9rem;
+        }
+
+        .contact {
+            flex-direction: row;
+            align-items: start;
+            padding-top: 4em;
+
+            .name-logo {
+                display: block;
+                padding-top: 2.5em;
+                font-size: 6rem;
+                font-weight: normal;
+            }
+
+
+            .contact-info,
+            .contact-form {
+                width: 50%;
+            }
+
+        }
+    }
+
+
+}

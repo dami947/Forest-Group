@@ -1,0 +1,594 @@
+@import './colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 87px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section-title {
+    padding: 2em;
+    font-size: 3.4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.header-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: -10
+}
+
+.sticky-body {
+    overflow: hidden;
+}
+
+// =======================================
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .nav-logo-link {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        font-size: 3rem;
+        padding: 0em 0.5em;
+        color: $blackColor;
+        text-decoration: none;
+    }
+
+    .nav-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        transform: translateX(-104%);
+        transition: transform .3s linear;
+        z-index: 10;
+
+        .nav-link {
+            padding: 1em;
+            color: $blackColor;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: $darkGray;
+        }
+    }
+
+    .nav-mobile-active {
+        transform: translateX(0);
+    }
+
+
+
+    .nav-desktop {
+        display: none;
+        font-size: 2rem;
+        padding-right: 1em;
+
+        .nav-link {
+            padding: 2em 1em;
+            color: $blackColor;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+            background-color: $blackColor;
+        }
+    }
+
+    .nav-btn {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        padding: 0.5em;
+        font-size: 4.4rem;
+        background-color: transparent;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+}
+
+// =======================================
+
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/jungle.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        color: #eee;
+
+        h1 {
+            margin-top: .5em;
+            font-size: 2.2rem;
+        }
+    }
+}
+
+// =======================================
+
+.about-us {
+    overflow: hidden;
+
+    .about-us-box {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em;
+    }
+
+    .about-us-item-one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us-image {
+        object-fit: cover;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .about-us-title {
+        padding: 1em;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .about-us-text {
+        text-align: justify;
+        line-height: 200%;
+    }
+}
+
+// =======================================
+
+.pictures {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-image: url(../img/little-girl.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    margin-top: 5em;
+
+    .pictures-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        padding: .5em 1em;
+        font-size: 3rem;
+        text-align: center;
+        color: #fff;
+        border: 2px solid #eee;
+    }
+
+    .header-bg {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+}
+
+// =======================================
+
+.offert {
+
+    .section-title {
+        padding-bottom: .5em;
+    }
+
+    .offert-text {
+        text-align: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        padding: 2em;
+        text-align: center;
+
+        .card-body {
+            min-width: 250px;
+            max-width: 300px;
+            width: 100%;
+            padding: 2em 1em;
+            margin-bottom: 2em;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px #999;
+            transition: transform .2s linear;
+
+            .offert-name {
+                font-size: 2.4rem;
+                padding-bottom: 0.5em
+            }
+
+            .offert-prices {
+                font-weight: bold;
+                font-size: 3.4rem;
+                padding-bottom: 0.5em
+            }
+
+            p {
+                padding-bottom: .5em;
+            }
+
+            .no {
+                color: $darkGray;
+            }
+
+            .ti-check {
+                color: $greenColor;
+                font-weight: bold;
+            }
+
+            .ti-minus {
+                color: $darkGray;
+                font-weight: bold;
+            }
+
+            .btn-card {
+                padding: .5em 3em;
+                margin-top: 1em;
+                font-size: 2rem;
+                color: $darkGray;
+                background-color: transparent;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 0 5px #999;
+                cursor: pointer;
+                transition: background-color .2s linear, color .2s linear;
+            }
+
+            .btn-card:hover {
+                color: #fff;
+                background-color: $greenColor;
+            }
+
+
+            .btn-main {
+                color: black;
+                background-color: $greenColor;
+                transition: background-color .2s linear;
+            }
+
+            .btn-main:hover {
+                background-color: $greenColorHover;
+            }
+        }
+
+        .card-body:hover {
+            transform: scale(1.05)
+        }
+    }
+
+    .more-offers {
+        padding-bottom: 3em;
+        text-align: center;
+
+        .btn-offert {
+            padding: 0.5em 1em;
+            font-size: 2.6rem;
+            border: 1px solid $blackColor;
+            border-radius: 8px;
+            background-color: $greenColor;
+            cursor: pointer;
+            transition: background-color .2s linear, border .2s linear;
+
+            a {
+                text-decoration: none;
+                color: $blackColor;
+            }
+        }
+
+        .btn-offert:hover {
+            color: #fff;
+            background-color: $greenColorHover;
+            border: 1px solid $greenColorHover;
+        }
+    }
+}
+
+// =======================================
+
+.section-links {
+    background-color: $lightGray;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    .name-logo {
+        font-size: 4rem;
+        font-weight: normal;
+    }
+
+    .about-us,
+    .as-firm,
+    .documents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.5em;
+    }
+
+    p {
+        font-size: 2rem;
+        padding: 0.5em 0;
+    }
+
+
+    .link {
+        padding-top: 0.3em;
+        text-decoration: none;
+        color: $darkGray;
+        transition: color;
+    }
+
+    .link:hover {
+        color: $blackColor;
+    }
+}
+
+// =======================================
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: $lightGray;
+    border-top: 1px solid $blackColor;
+
+    p {
+        text-align: center;
+        color: $darkGray;
+    }
+}
+
+// =========Page Offert=============================
+
+.offert-images {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url(../img/jungle-2.jpg);
+    z-index: 0;
+
+    .header-bg {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .offert {
+        color: #ddd;
+
+        .section-title {
+            padding-top: 3em;
+        }
+
+        .card-body {
+            background-color: rgba(120, 120, 120, .1);
+            box-shadow: none;
+            border: 1px solid #fff;
+
+
+            .no {
+                color: #999;
+            }
+
+            .ti-minus {
+                color: #999;
+            }
+
+            .btn-card {
+                color: #ddd;
+                border: 1px solid #fff;
+                box-shadow: none;
+                transition: background-color .2s linear, color .2s linear, border .2s linear;
+            }
+
+            .btn-card:hover {
+                color: #ddd;
+                border: 1px solid $greenColor;
+            }
+
+
+            .btn-main {
+                background-color: $greenColor;
+                transition: background-color .2s linear, border .2s linear;
+            }
+
+            .btn-main:hover {
+                background-color: $greenColorHover;
+                border: 1px solid $greenColorHover;
+            }
+        }
+    }
+}
+
+// =========Page Contact=============================
+
+
+.contact-images {
+    position: relative;
+    width: 100%;
+    background-image: url(../img/the-blue-lagoon.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    padding: 2em;
+    color: $lightGray;
+
+    .header-bg {
+        background-color: rgba(0, 0, 0, .6);
+    }
+
+    .section-title {
+        padding: 3em 0 .5em;
+        text-align: center;
+    }
+
+    .contact-text {
+        font-size: 1.6rem;
+        text-align: center;
+        color: #ccc;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+
+
+        .name-logo {
+            display: none;
+        }
+
+        h3 {
+            padding: .5em 0;
+            font-size: 3rem;
+            font-weight: normal;
+        }
+
+        p {
+            padding-top: .5em;
+            color: #ccc;
+        }
+
+        .contact-info-data,
+        .contact-form-box,
+        .contact-form,
+        .contact-info-logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .contact-form-box {
+            text-align: center;
+            padding-top: 1em;
+
+            label {
+                font-weight: bold;
+                color: #ccc;
+                padding-bottom: .5em;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                background-color: rgba(0, 0, 0, .6);
+                border: 1px solid $lightGray;
+                border-radius: 8px;
+            }
+
+            input {
+                padding: 0.5em;
+            }
+
+            textarea {
+                min-width: 100%;
+                min-height: 250px;
+                max-height: 600px;
+            }
+        }
+
+        .contact-form-btn {
+            width: 100%;
+            margin: 1em 0;
+            padding: .5em;
+            font-size: 3rem;
+            background-color: $greenColor;
+            color: $lightGray;
+            border: 1px solid $greenColor;
+            border-radius: 8px;
+            transition: background-color .2s linear, border .2s linear;
+        }
+
+        .contact-form-btn:hover {
+            background-color: $greenColorHover;
+            border: 1px solid $greenColorHover;
+        }
+    }
+}
+
+
+
+@import './midium';
+@import './large';

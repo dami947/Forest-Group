@@ -1,0 +1,92 @@
+@media(min-width:768px) {
+
+    html {
+        scroll-padding-top: 106px;
+    }
+
+    .nav {
+        position: sticky;
+
+        .nav-logo-link {
+            font-size: 3.6rem;
+        }
+
+        .nav-desktop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-btn {
+            display: none;
+        }
+    }
+
+
+    .header-image {
+        height: 60vh;
+
+        .header-text {
+            h1 {
+                margin-top: 0;
+                font-size: 3rem;
+            }
+
+            P {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+
+    .pictures {
+        height: 40vh;
+        background-image: url(../img/little-girl-hq.jpg);
+        margin-top: 7em;
+
+
+        .pictures-text {
+            width: 70%;
+            font-size: 4rem;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+    }
+
+    .offert {
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2em;
+            text-align: center;
+
+            .card-body {
+                width: 45%;
+                padding: 2em 1em;
+                margin: 2em 1em;
+
+                .offert-prices {
+                    padding-bottom: 1em
+                }
+            }
+
+        }
+
+        .more-offers {
+            .btn-offert {
+                padding: 0.5em 2em;
+                font-size: 3rem;
+            }
+
+        }
+    }
+
+
+
+
+}
