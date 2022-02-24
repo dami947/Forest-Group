@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
-<body>
+<body class="main-page">
     <nav class="nav" id="nav">
         <div class="nav-wrapper">
             <div class="nav-logo">
                 <a href="#" class="nav-logo-link"><i class="ti ti-christmas-tree"></i>Forest</a>
             </div>
             <div class="nav-desktop">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link active" href="#home">Home</a>
                 <a class="nav-link" href="#about-us">O nas</a>
                 <a class="nav-link" href="#offert">Oferta</a>
                 <a class="nav-link" href="./contact.html">Kontakt</a>
@@ -37,7 +37,7 @@
             <button class="nav-btn"><i class="ti ti-menu-2"></i></button>
         </div>
     </nav>
-    <header class="header-image">
+    <header class="header-image scrollspy" id="home">
         <div class="header-text wrapper">
             <p>Forest Group</p>
             <h1>Najpiękniejszy park w Twojej okolicy!</h1>
@@ -45,7 +45,7 @@
         <div class="header-bg"></div>
     </header>
 
-    <section class="about-us wrapper" id="about-us">
+    <section class="about-us wrapper scrollspy" id="about-us">
         <h2 class="section-title">O Nas</h2>
         <div class="about-us-box">
             <div class="about-us-item-one">
@@ -67,7 +67,7 @@
         <p class="pictures-text">Przygoda dla całej rodziny</p>
         <div class="header-bg"></div>
     </section>
-    <section class="offert wrapper" id="offert">
+    <section class="offert wrapper scrollspy" id="offert">
         <h2 class="section-title">Oferta</h2>
         <p class="offert-text">Wybierz jedną z pośród naszych wspaniałych ofert!</p>
         <div class="card">

@@ -45,6 +45,7 @@ body {
     overflow: hidden;
 }
 
+
 // =======================================
 
 .nav {
@@ -115,6 +116,11 @@ body {
             color: $blackColor;
             text-decoration: none;
         }
+
+        .active {
+            color: $darkGray;
+        }
+
 
         .nav-link:hover {
             color: #fff;
